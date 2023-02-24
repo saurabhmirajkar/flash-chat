@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,8 +11,6 @@
 		0921A07E29A8921A00554EC3 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0921A07C29A8921A00554EC3 /* MessageCell.swift */; };
 		0921A07F29A8921A00554EC3 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0921A07D29A8921A00554EC3 /* MessageCell.xib */; };
 		09CB333729A7EB200066AB9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09CB333629A7EB200066AB9E /* GoogleService-Info.plist */; };
-		09CB333A29A7EC830066AB9E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 09CB333929A7EC830066AB9E /* FirebaseAuth */; };
-		09CB333C29A7EC830066AB9E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 09CB333B29A7EC830066AB9E /* FirebaseFirestore */; };
 		09CB333E29A7F8080066AB9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB333D29A7F8080066AB9E /* Constants.swift */; };
 		0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B628176235DEE8100E35CAF /* AppDelegate.swift */; };
 		0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B628178235DEE8100E35CAF /* SceneDelegate.swift */; };
@@ -56,8 +54,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DB76C0197AE5C281009552D /* Pods_Flash_Chat_iOS13.framework in Frameworks */,
-				09CB333A29A7EC830066AB9E /* FirebaseAuth in Frameworks */,
-				09CB333C29A7EC830066AB9E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,16 +153,13 @@
 				0B62816F235DEE8100E35CAF /* Sources */,
 				0B628170235DEE8100E35CAF /* Frameworks */,
 				0B628171235DEE8100E35CAF /* Resources */,
+				C348B3899D0F8D2907BB9AD7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Flash Chat iOS13";
-			packageProductDependencies = (
-				09CB333929A7EC830066AB9E /* FirebaseAuth */,
-				09CB333B29A7EC830066AB9E /* FirebaseFirestore */,
-			);
 			productName = "Flash Chat iOS13";
 			productReference = 0B628173235DEE8100E35CAF /* Flash Chat iOS13.app */;
 			productType = "com.apple.product-type.application";
@@ -195,9 +188,6 @@
 				Base,
 			);
 			mainGroup = 0B62816A235DEE8100E35CAF;
-			packageReferences = (
-				09CB333829A7EC830066AB9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = 0B628174235DEE8100E35CAF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,6 +234,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C348B3899D0F8D2907BB9AD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -467,30 +474,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		09CB333829A7EC830066AB9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		09CB333929A7EC830066AB9E /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 09CB333829A7EC830066AB9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		09CB333B29A7EC830066AB9E /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 09CB333829A7EC830066AB9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0B62816B235DEE8100E35CAF /* Project object */;
 }
